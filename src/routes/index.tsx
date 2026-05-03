@@ -71,7 +71,7 @@ function generateRects(
             ? grid.fontWidth * 28
             : grid.windowWidth >= queries.md
               ? grid.fontWidth * 23
-              : grid.fontWidth * 20,
+              : grid.fontWidth * 19.5,
       height:
         grid.windowWidth >= queries.xxl
           ? grid.fontHeight * 19
@@ -79,7 +79,7 @@ function generateRects(
             ? grid.fontHeight * 18
             : grid.windowWidth >= queries.md
               ? grid.fontHeight * 15
-              : grid.fontHeight * 11,
+              : grid.fontHeight * 11.5,
       x: 0,
       y: 0,
       zIndex: 10,
@@ -101,7 +101,7 @@ function generateRects(
             ? grid.fontHeight * 17
             : grid.windowWidth >= queries.md
               ? grid.fontHeight * 16
-              : grid.fontHeight * 11,
+              : grid.fontHeight * 11.5,
       x: 0,
       y: 0,
       zIndex: 10,
@@ -123,7 +123,7 @@ function generateRects(
             ? grid.fontHeight * 14
             : grid.windowWidth >= queries.md
               ? grid.fontHeight * 11
-              : grid.fontHeight * 9,
+              : grid.fontHeight * 9.5,
       x: 0,
       y: 0,
       zIndex: 10,
@@ -387,8 +387,8 @@ function App() {
   | '  , /|\   .  ,  ^ |
   |_____/_|_\__________|
 `
-          : grid.windowWidth >= queries.md
-            ? String.raw`
+            : grid.windowWidth >= queries.md
+              ? String.raw`
           o\
   _______/__\_______
  |__    "--'    --(_|
@@ -398,7 +398,7 @@ function App() {
  | '  , /|\  . ,  ^ |
  |_____/_|_\________|
 `
-            : String.raw`
+              : String.raw`
   _____/"\_____
  |_   "-'   -(_|
 (__".    _. ' '|
@@ -443,8 +443,8 @@ J \              '.
      \ |   .'
       \|.-'
 `
-          : grid.windowWidth >= queries.md
-            ? String.raw`
+            : grid.windowWidth >= queries.md
+              ? String.raw`
          _.
     _.-"'  '.
 +:""         '.
@@ -458,7 +458,7 @@ J \            '.
      \ |  _.'"
       \|.'
 `
-            : String.raw`
+              : String.raw`
   _.-'"_
 +'      '.
 |\        '.
@@ -508,8 +508,8 @@ J \            '.
  :  ;    ;     ;  _.\ :
 []'''''''''[]'''''''''[]
 `
-          : grid.windowWidth >= queries.md
-            ? String.raw`
+            : grid.windowWidth >= queries.md
+              ? String.raw`
 =........=........=
 :   .-"'''"-._    :
 :  / .'''';_. \   :
@@ -522,7 +522,7 @@ J \            '.
 :-|/'  .    |   |- l\
 =''''''''=''''''''=
 `
-            : String.raw`
+              : String.raw`
 =......=......=
 :  .-"'''"_,  :
 : / .''''.  ; :
@@ -561,8 +561,8 @@ J \            '.
 |     .--------------.     |
 |____/_o_0________0_o_\____|
 `
-          : grid.windowWidth >= queries.md
-            ? String.raw`
+            : grid.windowWidth >= queries.md
+              ? String.raw`
 .----------------------.
 | .------------------. |
 | |  __  ______  __  | |
@@ -572,7 +572,7 @@ J \            '.
 |    .------------.    |
 |___/_._o______o_._\___|
 `
-            : String.raw`
+              : String.raw`
 .----------------.
 | .------------. |
 | | () |)-| () | |
@@ -632,63 +632,63 @@ _.'''._ ’ _.’''._
 _.-'v'-._
 `,
     },
-//     {
-//       name: 'cv',
-//       to: 'ZachariahWatsonResume.pdf',
-//       content:
-//         grid.windowWidth >= queries.xxl
-//           ? String.raw`
-//    ______________________
-//  / \        __  _    _   \
-// |   |      /  )' )  /    |
-//  \_ |     /     (  /     |
-//     |    (__/    \/      |
-//     |                    |
-//     | ########           |
-//     |  . ~~~~~~~~~~~~~~~ |
-//     |  . ~~~~~~~         |
-//     | ###### ####        |
-//     |  . ~~~~~~~~~~~     |
-//     |  __________________|__
-//     \_/____________________/
-// `
-//           : grid.windowWidth >= queries.xl
-//             ? String.raw`
-//    ____________________
-//  / \       __  _    _  \
-// |   |     /  )' )  /   |
-//  \_ |    /     (  /    |
-//     |   (__/    \/     |
-//     |                  |
-//     | ########         |
-//     |  . ~~~~~~~~~~~~  |
-//     |  . ~~~~~~~       |
-//     | ###### ####      |
-//     |  ________________|__
-//     \_/__________________/
-// `
-//             : grid.windowWidth >= queries.md
-//               ? String.raw`
-//    _________________
-//  / \     __  _    _ \
-// |   |   /  )' )  /  |
-//  \_ |  /     (  /   |
-//     | (__/    \/    |
-//     |               |
-//     | ########      |
-//     |  . ~~~~~~~~~~ |
-//     |  _____________|__
-//     \_/_______________/
-// `
-//               : String.raw`
-//  __________
-// /\  _. , _ \
-// \| (__ \/  |
-//  | . ~~~~~ |
-//  | ________|_
-//  \/_________/
-// `,
-//     },
+    //     {
+    //       name: 'cv',
+    //       to: 'ZachariahWatsonResume.pdf',
+    //       content:
+    //         grid.windowWidth >= queries.xxl
+    //           ? String.raw`
+    //    ______________________
+    //  / \        __  _    _   \
+    // |   |      /  )' )  /    |
+    //  \_ |     /     (  /     |
+    //     |    (__/    \/      |
+    //     |                    |
+    //     | ########           |
+    //     |  . ~~~~~~~~~~~~~~~ |
+    //     |  . ~~~~~~~         |
+    //     | ###### ####        |
+    //     |  . ~~~~~~~~~~~     |
+    //     |  __________________|__
+    //     \_/____________________/
+    // `
+    //           : grid.windowWidth >= queries.xl
+    //             ? String.raw`
+    //    ____________________
+    //  / \       __  _    _  \
+    // |   |     /  )' )  /   |
+    //  \_ |    /     (  /    |
+    //     |   (__/    \/     |
+    //     |                  |
+    //     | ########         |
+    //     |  . ~~~~~~~~~~~~  |
+    //     |  . ~~~~~~~       |
+    //     | ###### ####      |
+    //     |  ________________|__
+    //     \_/__________________/
+    // `
+    //             : grid.windowWidth >= queries.md
+    //               ? String.raw`
+    //    _________________
+    //  / \     __  _    _ \
+    // |   |   /  )' )  /  |
+    //  \_ |  /     (  /   |
+    //     | (__/    \/    |
+    //     |               |
+    //     | ########      |
+    //     |  . ~~~~~~~~~~ |
+    //     |  _____________|__
+    //     \_/_______________/
+    // `
+    //               : String.raw`
+    //  __________
+    // /\  _. , _ \
+    // \| (__ \/  |
+    //  | . ~~~~~ |
+    //  | ________|_
+    //  \/_________/
+    // `,
+    //     },
   ]
 
   return (
