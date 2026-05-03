@@ -28,7 +28,7 @@ export const Route = createRootRoute({
         sb="░"
         fontPath={`${import.meta.env.BASE_URL}CascadiaMono-VariableFont_wght.ttf`}
         fontColor="#F7CA25"
-        bgColor="#1F1506"
+        bgColor="#1A1105"
         textShadow="0 0 6px #ff8000, 0 0 10px #ff8000, 0 0 24px #ff8000,
         0 0 6px #ff4540, 0 0 0px #ff4540, 0 0 0px #ff4540"
         //     bgColor="#00140b"
