@@ -90,15 +90,15 @@ _/   |_/_)(_)(_(_(__
           )}
           <div className="mt-6 md:mt-10 pl-4 break-keep text-wrap">
             <p className="ascii-text">
-              Zachariah "Zach" Watson is a web developer.
-            </p>
-            <br />
-            <p className="ascii-text">
               Zachariah "Zach" Watson is an algorithmic artist.
             </p>
             <br />
             <p className="ascii-text">
               Zachariah "Zach" Watson is a singer-songwriter and producer.
+            </p>
+            <br />
+            <p className="ascii-text">
+              Zachariah "Zach" Watson types at 92 WPM. Thinks in riddles. Juggles.
             </p>
             <br />
             <p className="ascii-text">

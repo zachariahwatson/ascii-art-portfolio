@@ -46,18 +46,88 @@ function generateRects(
         grid.windowWidth >= queries.xxl
           ? grid.fontWidth * 31.5
           : grid.windowWidth >= queries.xl
-            ? grid.fontWidth * 27
-            : grid.fontWidth * 22.5,
+            ? grid.fontWidth * 28
+            : grid.windowWidth >= queries.md
+              ? grid.fontWidth * 26
+              : grid.fontWidth * 20,
       height:
         grid.windowWidth >= queries.xxl
-          ? grid.fontHeight * 16.5
+          ? grid.fontHeight * 15
           : grid.windowWidth >= queries.xl
-            ? grid.fontHeight * 15.5
-            : grid.fontHeight * 11.5,
+            ? grid.fontHeight * 14
+            : grid.windowWidth >= queries.md
+              ? grid.fontHeight * 13
+              : grid.fontHeight * 8,
       x: 0,
       y: 0,
       zIndex: 10,
-      name: '▇▆ art',
+      name: grid.windowWidth >= queries.md ? 'code art.txt' : 'code art.t..',
+    },
+    {
+      width:
+        grid.windowWidth >= queries.xxl
+          ? grid.fontWidth * 30
+          : grid.windowWidth >= queries.xl
+            ? grid.fontWidth * 28
+            : grid.windowWidth >= queries.md
+              ? grid.fontWidth * 23
+              : grid.fontWidth * 20,
+      height:
+        grid.windowWidth >= queries.xxl
+          ? grid.fontHeight * 19
+          : grid.windowWidth >= queries.xl
+            ? grid.fontHeight * 18
+            : grid.windowWidth >= queries.md
+              ? grid.fontHeight * 15
+              : grid.fontHeight * 11,
+      x: 0,
+      y: 0,
+      zIndex: 10,
+      name: 'design.txt',
+    },
+    {
+      width:
+        grid.windowWidth >= queries.xxl
+          ? grid.fontWidth * 25
+          : grid.windowWidth >= queries.xl
+            ? grid.fontWidth * 23
+            : grid.windowWidth >= queries.md
+              ? grid.fontWidth * 21.5
+              : grid.fontWidth * 15.5,
+      height:
+        grid.windowWidth >= queries.xxl
+          ? grid.fontHeight * 18
+          : grid.windowWidth >= queries.xl
+            ? grid.fontHeight * 17
+            : grid.windowWidth >= queries.md
+              ? grid.fontHeight * 16
+              : grid.fontHeight * 11,
+      x: 0,
+      y: 0,
+      zIndex: 10,
+      name: '3d.txt',
+    },
+    {
+      width:
+        grid.windowWidth >= queries.xxl
+          ? grid.fontWidth * 33
+          : grid.windowWidth >= queries.xl
+            ? grid.fontWidth * 31.5
+            : grid.windowWidth >= queries.md
+              ? grid.fontWidth * 27
+              : grid.fontWidth * 21.5,
+      height:
+        grid.windowWidth >= queries.xxl
+          ? grid.fontHeight * 14
+          : grid.windowWidth >= queries.xl
+            ? grid.fontHeight * 14
+            : grid.windowWidth >= queries.md
+              ? grid.fontHeight * 11
+              : grid.fontHeight * 9,
+      x: 0,
+      y: 0,
+      zIndex: 10,
+      name: 'music.txt',
     },
     {
       width:
@@ -81,50 +151,28 @@ function generateRects(
       zIndex: 10,
       name: grid.windowWidth >= queries.md ? 'me.txt' : 'me..',
     },
-    {
-      width:
-        grid.windowWidth >= queries.xxl
-          ? grid.fontWidth * 32
-          : grid.windowWidth >= queries.xl
-            ? grid.fontWidth * 29
-            : grid.windowWidth >= queries.md
-              ? grid.fontWidth * 26.5
-              : grid.fontWidth * 16.5,
-      height:
-        grid.windowWidth >= queries.xxl
-          ? grid.fontHeight * 17
-          : grid.windowWidth >= queries.xl
-            ? grid.fontHeight * 16
-            : grid.windowWidth >= queries.md
-              ? grid.fontHeight * 14
-              : grid.fontHeight * 9.5,
-      x: 0,
-      y: 0,
-      zIndex: 10,
-      name: 'cv.pdf',
-    },
-    {
-      width:
-        grid.windowWidth >= queries.xxl
-          ? grid.fontWidth * 32
-          : grid.windowWidth >= queries.xl
-            ? grid.fontWidth * 30
-            : grid.windowWidth >= queries.md
-              ? grid.fontWidth * 23
-              : grid.fontWidth * 19.5,
-      height:
-        grid.windowWidth >= queries.xxl
-          ? grid.fontHeight * 17
-          : grid.windowWidth >= queries.xl
-            ? grid.fontHeight * 16
-            : grid.windowWidth >= queries.md
-              ? grid.fontHeight * 12
-              : grid.fontHeight * 9.5,
-      x: 0,
-      y: 0,
-      zIndex: 10,
-      name: 'work.txt',
-    },
+    // {
+    //   width:
+    //     grid.windowWidth >= queries.xxl
+    //       ? grid.fontWidth * 32
+    //       : grid.windowWidth >= queries.xl
+    //         ? grid.fontWidth * 29
+    //         : grid.windowWidth >= queries.md
+    //           ? grid.fontWidth * 26.5
+    //           : grid.fontWidth * 16.5,
+    //   height:
+    //     grid.windowWidth >= queries.xxl
+    //       ? grid.fontHeight * 17
+    //       : grid.windowWidth >= queries.xl
+    //         ? grid.fontHeight * 16
+    //         : grid.windowWidth >= queries.md
+    //           ? grid.fontHeight * 14
+    //           : grid.fontHeight * 9.5,
+    //   x: 0,
+    //   y: 0,
+    //   zIndex: 10,
+    //   name: 'cv.txt',
+    // },
   ]
 
   const placed: cardProps[] = []
@@ -311,47 +359,226 @@ function App() {
 
   const cardData = [
     {
-      name: '▇▆ art',
-      to: 'https://zchwtsn.com',
+      name: 'code art',
+      to: '',
       content:
         grid.windowWidth >= queries.xxl
           ? String.raw`
-┌──────────────────────────┐
-│            o\            │
-│   ________/__\________   │
-│  |     ."_____) ---(  |  │
-│ ,'-.              .'"-|  │
-│(____".        ._ '   ||  │
-│  |   _      _/  \   _-|  │
-│  |__/_\.___/_____\_/  |  │
-│  | '  , /|\   .  ,  ^ |  │
-│  |_____/_|_\__________|  │
-└──────────────────────────┘
-   zchwtsn.txt - Shortcut
+             o\
+   _________/__\_________
+  |       ."_____) ---(  |
+ ,'-._               .'"-|
+(_____".            '   ||
+  |            _.-.      |
+  |   _      _/ /  \   _-|
+  |__/_\-___/_______\_/  |
+  | '  , /|\ ^   .  ,  ^ |
+  |_____/_|_\____________|
 `
           : grid.windowWidth >= queries.xl
             ? String.raw`
-┌──────────────────────┐
-│          o\          │
-│  _______/__\_______  │
-│ |__    "--'    --(_| │
-│(___".       _  .' || │
-│ |   _     _/ \   _-| │
-│ |__/_\___/____\_/  | │
-│ | '  , /|\  . ,  ^ | │
-│ |_____/_|_\________| │
-└──────────────────────┘
- zchwtsn.txt - Shortcut
+            o\
+   ________/__\________
+  |     ."_____) ---(  |
+ ,'-.              .'"-|
+(____".        ._ '   ||
+  |   _      _/  \   _-|
+  |__/_\.___/_____\_/  |
+  | '  , /|\   .  ,  ^ |
+  |_____/_|_\__________|
+`
+          : grid.windowWidth >= queries.md
+            ? String.raw`
+          o\
+  _______/__\_______
+ |__    "--'    --(_|
+(___".       _  .' ||
+ |   _     _/ \   _-|
+ |__/_\___/____\_/  |
+ | '  , /|\  . ,  ^ |
+ |_____/_|_\________|
 `
             : String.raw`
-┌─────────────────┐
-│  _____/"\_____  │
-│ |_   "-'   -(_| │
-│(__".    _. ' '| │
-│ |_,-___/__\_-.| │
-│ |____/|\______| │
-└─────────────────┘
-   zchwtsn.txt ↲
+  _____/"\_____
+ |_   "-'   -(_|
+(__".    _. ' '|
+ |_,-___/__\_-.|
+ |____/|\______|
+`,
+    },
+    {
+      name: '3d',
+      to: '',
+      content:
+        grid.windowWidth >= queries.xxl
+          ? String.raw`
+          _.-+.
+    _.-""     '.
++:""            '.
+J \               '.
+ L \             _.-+
+ |  '.       _.-"   |
+ J    \  _.-"       L
+  L    +"          J
+  +    |           |
+   \   |          .+
+    \  |       .-'
+     \ |    .-'
+      \| .-'
+       +
+`
+          : grid.windowWidth >= queries.xl
+            ? String.raw`
+          _+.
+    _.-""    '.
++:""           '.
+J \              '.
+ L \             _.+
+ |  '.       _.-"  |
+ J    \  _.-"      L
+  L    +"         J
+  +    |          |
+   \   |         .+
+    \  |      _.'
+     \ |   .'
+      \|.-'
+`
+          : grid.windowWidth >= queries.md
+            ? String.raw`
+         _.
+    _.-"'  '.
++:""         '.
+J \            '.
+ L \            .+
+ |  '.       .-" |
+ J    \  _.-"    L
+  L    +"       J
+  +    |        |
+   \   |      .+
+     \ |  _.'"
+      \|.'
+`
+            : String.raw`
+  _.-'"_
++'      '.
+|\        '.
+| '.    _-'|
++   +-"'   |
+ \  |      |
+  \ |   _.'
+   \|.-'
+`,
+    },
+    {
+      name: 'design',
+      to: '',
+      content:
+        grid.windowWidth >= queries.xxl
+          ? String.raw`
+[]..........[]..........[]
+ :     .-"''''"-.       :
+ :    /  _.._    '\     :
+ :   / /'    '-.   ; . .:
+ :   | |__  __  \   |   :
+ :.-.| | e'/e'  |   |   :
+ :   | |  |     |   |'--:
+[]   | |  '-    |   |   []
+ :   |  \ --'  /|   |   :
+ :   |   ';---'\|   |  ,:
+ :   |  .-'     |   |  |',
+ :'--|/'        |   |--|_ r
+ :   ;    .     ;  _.\   l\
+ :    '-.;_    /.-'     :
+[]''''''''''[]''''''''''[]
+`
+          : grid.windowWidth >= queries.xl
+            ? String.raw`
+[].........[].........[]
+ :    .-"''''"-.      :
+ :   /  _.._    '\    :
+ :  / /'    '-.   ; . :
+ :  | |__  __  \   |  :
+ :-.| | e'/e'  |   |  :
+ :  | |  |     |   |'-:
+[]  | |  '-    |   |  []
+ :  |  \ --'  /|   | ,:
+ :  |   ';---'\|   | |',
+ :  |  .-'     |   | |_ r
+ :--|/'        |   |-- l\
+ :  ;    ;     ;  _.\ :
+[]'''''''''[]'''''''''[]
+`
+          : grid.windowWidth >= queries.md
+            ? String.raw`
+=........=........=
+:   .-"'''"-._    :
+:  / .'''';_. \   :
+: | / _  _  \  ;  :
+:-| | e, e  |   | :
+= | |  L    |   |-=
+: |  \ --' /|   |,:
+: |   ';--'\|   ||',
+: |  .-'    |   ||_ r
+:-|/'  .    |   |- l\
+=''''''''=''''''''=
+`
+            : String.raw`
+=......=......=
+:  .-"'''"_,  :
+: / .''''.  ; :
+:; ' e  e | | :
+=| |  L   | ; =
+:|  \ -' /| |',
+:|   ';-'\| |_ r
+=''''''=''''' l\
+`,
+    },
+    {
+      name: 'music',
+      to: '',
+      content:
+        grid.windowWidth >= queries.xxl
+          ? String.raw`
+.----------------------------.
+| .------------------------. |
+| | //A               90NR | |
+| |    __   ______   __    | |
+| |   /  \ |\\\...| /  \   | |
+| |   \__/ |///___| \__/   | |
+| '________________________' |
+|      .--------------.      |
+|_____/_o_0________0_o_\_____|
+`
+          : grid.windowWidth >= queries.xl
+            ? String.raw`
+.--------------------------.
+| .----------------------. |
+| | //A             90NR | |
+| |   __   ______   __   | |
+| |  /  \ |\\\...| /  \  | |
+| |  \__/ |///___| \__/  | |
+| '______________________' |
+|     .--------------.     |
+|____/_o_0________0_o_\____|
+`
+          : grid.windowWidth >= queries.md
+            ? String.raw`
+.----------------------.
+| .------------------. |
+| |  __  ______  __  | |
+| | /  \|\\\...|/  \ | |
+| | \__/|///___|\__/ | |
+| '------------------' |
+|    .------------.    |
+|___/_._o______o_._\___|
+`
+            : String.raw`
+.----------------.
+| .------------. |
+| | () |)-| () | |
+| '------------' |
+|   ,________,   |
+|__/_.o____o._\__|
 `,
     },
     {
@@ -405,119 +632,63 @@ _.'''._ ’ _.’''._
 _.-'v'-._
 `,
     },
-    {
-      name: 'cv',
-      to: 'ZachariahWatsonResume.pdf',
-      content:
-        grid.windowWidth >= queries.xxl
-          ? String.raw`
-   ______________________
- / \        __  _    _   \
-|   |      /  )' )  /    |
- \_ |     /     (  /     |
-    |    (__/    \/      |
-    |                    |
-    | ########           |
-    |  . ~~~~~~~~~~~~~~~ |
-    |  . ~~~~~~~         |
-    | ###### ####        |
-    |  . ~~~~~~~~~~~     |
-    |  __________________|__
-    \_/____________________/
-`
-          : grid.windowWidth >= queries.xl
-            ? String.raw`
-   ____________________
- / \       __  _    _  \
-|   |     /  )' )  /   |
- \_ |    /     (  /    |
-    |   (__/    \/     |
-    |                  |
-    | ########         |
-    |  . ~~~~~~~~~~~~  |
-    |  . ~~~~~~~       |
-    | ###### ####      |
-    |  ________________|__
-    \_/__________________/
-`
-            : grid.windowWidth >= queries.md
-              ? String.raw`
-   _________________
- / \     __  _    _ \
-|   |   /  )' )  /  |
- \_ |  /     (  /   |
-    | (__/    \/    |
-    |               |
-    | ########      |
-    |  . ~~~~~~~~~~ |
-    |  _____________|__
-    \_/_______________/
-`
-              : String.raw`
- __________
-/\  _. , _ \
-\| (__ \/  |
- | . ~~~~~ |
- | ________|_
- \/_________/
-`,
-    },
-    {
-      name: 'work',
-      to: '/work',
-      content:
-        grid.windowWidth >= queries.xxl
-          ? String.raw`
-  ________________   _____
- |.--------------.|/|||||||
- ||              || |||||||
- || ~#           || |||||||
- ||              || |||||||
- ||______________|| |||||||
--|______________._| |||||||--
-      /__||__   / \ |||||||
-   .-' \____/   \_ \|:::::|
-  _\______________'-.__
- /:::::::::':::'::\ .\\\---.
-/::::====::::.:.:::\ \\_)   \
-'=================='  '-----'
-`
-          : grid.windowWidth >= queries.xl
-            ? String.raw`
-  ______________   ____
- |.------------.|/||||||
- ||            || ||||||
- || ~#         || ||||||
- ||____________|| ||||||
--|____________._| ||||||--
-     /__||__  / \ ||||||
-  .-' \____/  \_ \|::::|
-  _\____________'-.__
- /::::::::':::':\ .\\\--.
-/:::====::::.:.::\ \\_)  \
-'================'  '----'
-`
-            : grid.windowWidth >= queries.md
-              ? String.raw`
-  __________   ___
- |.--------.|/|||||
- || ~#     || |||||
- ||________|| |||||
--'----,,----' |||||-
-   . (__)  / \|:::|
-  _/________\._
- /::;;::.:.:\.\)-.
- '==========' '---'
-`
-              : String.raw`
-  _______   __
- |:""""":|/||||
- ||_____|| ||||
--'---_---'\|::|-
- /:;;:.:.\ \D\
- '"""""""'  "'
-`,
-    },
+//     {
+//       name: 'cv',
+//       to: 'ZachariahWatsonResume.pdf',
+//       content:
+//         grid.windowWidth >= queries.xxl
+//           ? String.raw`
+//    ______________________
+//  / \        __  _    _   \
+// |   |      /  )' )  /    |
+//  \_ |     /     (  /     |
+//     |    (__/    \/      |
+//     |                    |
+//     | ########           |
+//     |  . ~~~~~~~~~~~~~~~ |
+//     |  . ~~~~~~~         |
+//     | ###### ####        |
+//     |  . ~~~~~~~~~~~     |
+//     |  __________________|__
+//     \_/____________________/
+// `
+//           : grid.windowWidth >= queries.xl
+//             ? String.raw`
+//    ____________________
+//  / \       __  _    _  \
+// |   |     /  )' )  /   |
+//  \_ |    /     (  /    |
+//     |   (__/    \/     |
+//     |                  |
+//     | ########         |
+//     |  . ~~~~~~~~~~~~  |
+//     |  . ~~~~~~~       |
+//     | ###### ####      |
+//     |  ________________|__
+//     \_/__________________/
+// `
+//             : grid.windowWidth >= queries.md
+//               ? String.raw`
+//    _________________
+//  / \     __  _    _ \
+// |   |   /  )' )  /  |
+//  \_ |  /     (  /   |
+//     | (__/    \/    |
+//     |               |
+//     | ########      |
+//     |  . ~~~~~~~~~~ |
+//     |  _____________|__
+//     \_/_______________/
+// `
+//               : String.raw`
+//  __________
+// /\  _. , _ \
+// \| (__ \/  |
+//  | . ~~~~~ |
+//  | ________|_
+//  \/_________/
+// `,
+//     },
   ]
 
   return (
@@ -545,6 +716,8 @@ _.-'v'-._
          ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼       ┼┼┼┼┼┼┼┼┼┼┼┼┼┼
         ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼       ┼┼┼┼┼┼┼┼┼┼┼┼┼┼
        ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼       ┼┼┼┼┼┼┼┼┼┼┼┼┼┼
+
+////////////////////////////UNDER CONSTRUCTION///////////////////////////
       `
             : grid.windowWidth >= queries.xl
               ? String.raw`
@@ -558,6 +731,8 @@ _.-'v'-._
        ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼     ┼┼┼┼┼┼┼┼┼┼
       ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼     ┼┼┼┼┼┼┼┼┼┼
      ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼     ┼┼┼┼┼┼┼┼┼┼
+
+////////////////UNDER CONSTRUCTION/////////////////
       `
               : String.raw`
   ┼┼┼┼┼┼┼┼┼┼┼   ┼┼┼┼┼┼  ┼┼┼┼┼┼
@@ -566,6 +741,8 @@ _.-'v'-._
      ┼┼┼┼┼┼┼┼┼┼┼   ┼┼┼┼┼
     ┼┼┼┼┼┼┼┼┼┼┼   ┼┼┼┼┼
    ┼┼┼┼┼┼┼┼┼┼┼   ┼┼┼┼┼
+
+/////UNDER CONSTRUCTION/////
       `}
         </div>
         {/* </Link> */}
